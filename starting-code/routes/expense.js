@@ -13,6 +13,7 @@ router.post("/expense/create", create);
 router.get("/expense/:id", expenseById, read);
 
 // Create PUT route to update an expense
+router.put("expense/:id", expenseById, update);
 
 // Create DELETE route to remove an expense
 
