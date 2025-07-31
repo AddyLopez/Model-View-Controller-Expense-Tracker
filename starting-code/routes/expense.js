@@ -26,5 +26,6 @@ router.put("/expense/:id", expenseById, update);
 router.delete("/expense/:id", expenseById, remove);
 
 // Create GET route to read a list of expenses
+router.get("/expense/list/:expenseDate", expenseByDate, read);
 
 module.exports = router;
