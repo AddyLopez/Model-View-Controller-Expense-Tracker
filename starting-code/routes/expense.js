@@ -1,7 +1,8 @@
-// require express and it's router component
-const express = require('express');
+// require express and its router component
+const express = require("express");
 
 const router = express.Router();
+const create = require("../controllers");
 
 // require the middlewares and callback functions from the controller directory
 
