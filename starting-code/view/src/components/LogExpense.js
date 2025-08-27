@@ -33,7 +33,7 @@ const LogExpense = ({ handleClose, _id, refreshExpenses }) => {
 
   const [err, setErr] = useState([]);
 
-  const setExpenseData = async (id) => {
+  const setExpenseData = async (_id) => {
     // update view w/ data from model
     const expenseById = await fetchExpense(_id);
     setExpense(expenseById[0]);
