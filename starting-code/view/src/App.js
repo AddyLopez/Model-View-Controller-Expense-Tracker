@@ -88,7 +88,7 @@ function App() {
           expenses={expenses}
           refreshExpenses={async () => {
             // update view from model w/ controller
-            const res = [];
+            const res = fetchExpenses(selectDate.getTime());
             setExpenses(res);
           }}
           _id={id}
