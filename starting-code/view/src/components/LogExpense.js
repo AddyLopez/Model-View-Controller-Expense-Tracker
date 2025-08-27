@@ -56,18 +56,19 @@ const LogExpense = ({ handleClose, _id, refreshExpenses }) => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
+
     if (data.get("essential") === null) {
       data.set("essential", false);
     }
     if (_id) {
       formSetter(data, expense);
       // update data from model w/ controller
-      const res = "";
+      const res = await updateExpense(_id, data);
       expenseListRefresh(res);
     } else {
       // add data to model w/ controller
       data.set("created_at", expense.created_at);
-      const res = "";
+      const res = await createExpense(data);
       expenseListRefresh(res);
     }
   };
