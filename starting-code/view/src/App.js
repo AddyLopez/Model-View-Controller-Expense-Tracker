@@ -18,6 +18,7 @@ function App() {
 
   useEffect(() => {
     // update view from model w/ controller
+    fetchExpenses().then((res) => setExpenses(res));
   }, []);
 
   return (
